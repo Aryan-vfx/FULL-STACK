@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filterable Product List</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h2>Available Products</h2>
+    <div class="filter-box">
+      <label for="category">Choose Category:</label>
+      <select id="category">
+        <option value="All">Show All</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Books">Books</option>
+      </select>
+    </div>
+    <ul id="product-list"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
