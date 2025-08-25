@@ -1,0 +1,114 @@
+Dynamic Product Filter
+
+A web-based dropdown that allows users to filter products based on categories (like Electronics, Clothing, Books, etc.).
+The product list updates instantly without reloading the page.
+
+JavaScript Logic
+
+const products = […]
+
+Stores all product data as an array of objects.
+
+Each object has two properties: name and category.
+
+Example: { name: "Shirt", category: "Clothing" }.
+
+This acts as the main dataset for filtering.
+
+function displayProducts(filteredProducts)
+
+Takes the filtered list as input.
+
+Clears the existing product list.
+
+Loops through filteredProducts and dynamically creates <li> items.
+
+Updates the page instantly with the new list.
+
+document.getElementById("filter")
+
+Selects the <select> dropdown element from HTML.
+
+Allows JavaScript to know which filter option is selected.
+
+filter.addEventListener("change", … )
+
+Detects when the user changes the category.
+
+Runs the filtering logic immediately.
+
+Ensures displayed products match the selected option.
+
+const filteredProducts = products.filter(…)
+
+Uses the .filter() method to create a subset of products.
+
+If Clothing is selected → only products with category === "Clothing" are shown.
+
+If All is chosen → displays the entire product list.
+
+productList.appendChild(li)
+
+Appends each product (as an <li> element) to the product list.
+
+Visually updates the page with the new results.
+
+HTML
+
+<select id="filter">
+
+A dropdown menu for selecting a category.
+
+Includes options like All, Electronics, Clothing, Books.
+
+Acts as the input control for filtering.
+
+<ul id="productList">
+
+An unordered list to display the filtered products.
+
+Each product is inserted as a <li>.
+
+<option value="all">
+
+Special option that resets the filter.
+
+Shows all products regardless of category.
+
+<div class="container">
+
+Groups the dropdown and product list.
+
+Makes the layout clean and organized.
+
+CSS
+
+.container
+
+Adds padding, border, and background.
+
+Creates a neat box for the filter UI.
+
+select
+
+Styles the dropdown with padding and border.
+
+Makes it user-friendly and easy to click.
+
+ul li
+
+Displays each product in a clean list format.
+
+Adds spacing and typography for better readability.
+
+Learning Outcomes
+
+Learned to manage datasets in JavaScript using arrays of objects.
+
+Practiced event-driven programming using the change event.
+
+Understood how to use .filter() to generate dynamic subsets.
+
+Gained experience with DOM manipulation by creating and inserting elements dynamically.
+
+Built an interactive feature where users control displayed content without refreshing the page.
